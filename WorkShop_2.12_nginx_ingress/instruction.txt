@@ -1,0 +1,14 @@
+# install heml to kubernates cluster 
+url : https://helm.sh/docs/using_helm/#installing-helm
+
+# create nginx ingress controller with helm command
+$ helm install --name nginx-ingress .
+
+# get ls with helm command
+$ helm ls 
+
+
+# delete nginx ingress controller with helm command
+$ helm delete nginx-ingress
+
+ 
