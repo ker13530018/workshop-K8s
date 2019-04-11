@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kerkoleng-ingress
+  annotations:
+    certmanager.k8s.io/issuer: "letsencrypt-prod"
+    certmanager.k8s.io/acme-challenge-type: http01
+spec:
+  tls:
+   - hosts:
+     - www.kerkoleng.co
+     - kerkoleng.co
+     secretName: www-kerkoleng-co-tls
+  rules:
+  - host: www.kerkoleng.co 
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: coffee-svc
+          servicePort: 80
+  - host: kerkoleng.co
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: coffee-svc
+          servicePort: 80 
