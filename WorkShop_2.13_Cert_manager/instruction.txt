@@ -1,0 +1,8 @@
+# Quick-Start using Cert-Manager with NGINX Ingress
+url : https://docs.cert-manager.io/en/latest/tutorials/acme/quick-start/index.html
+
+# nginx ingress in GCP
+url : https://cloud.google.com/community/tutorials/nginx-ingress-gke
+
+# svc ingress controller use static ip
+url : https://github.com/kubernetes/ingress-nginx/tree/master/docs/examples/static-ip
