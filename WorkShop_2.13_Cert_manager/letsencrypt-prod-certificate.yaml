@@ -1,17 +1,17 @@
 apiVersion: certmanager.k8s.io/v1alpha1
 kind: Certificate
 metadata:
-  name: acme-crt
+  name: acme-crt-chronograf
 spec:
-  secretName: acme-crt-secret
+  secretName: acme-crt-secret-chronograf
   dnsNames:
-  - www.kerkoleng.com
+    - chronograf.kerkoleng.co
   acme:
     config:
-    - http01:
-        ingressClass: nginx
-      domains:
-      - www.kerkoleng.com
+      - http01:
+          ingressClass: nginx
+        domains:
+          - chronograf.kerkoleng.co
   issuerRef:
     name: letsencrypt-prod
     # We can reference ClusterIssuers by changing the kind here.
